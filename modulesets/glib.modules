@@ -24,9 +24,8 @@
       <dep package="gnutls"/>
     </dependencies>
     <branch repo="github.gnome"
-            module="glib-networking/archive/2.43.1.tar.gz"
-            version="2.43.1"
-            size="186374"
+            module="glib-networking/archive/2.53.90.tar.gz"
+            version="2.53.90"
             checkoutdir="glib-networking"/>
   </autotools>
 
@@ -43,9 +42,8 @@
       <dep package="zlib"/>
     </dependencies>
     <branch repo="github.gnome"
-            module="glib/archive/2.43.90.tar.gz"
-            version="2.43.90"
-            size="7481630"
+            module="glib/archive/2.53.6.tar.gz"
+            version="2.53.6"
             checkoutdir="glib"/>
   </autotools>
 </moduleset>
