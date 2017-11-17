@@ -17,8 +17,6 @@
 
   <autotools id="gstreamer" autogenargs="--disable-gtk-doc">
     <dependencies>
-      <dep package="bison"/>
-      <dep package="flex"/>
       <dep package="glib"/>
     </dependencies>
     <branch repo="gstreamer" module="gstreamer" checkoutdir="gstreamer" />
@@ -27,11 +25,6 @@
   <autotools id="gst-plugins-base" autogenargs="--disable-gtk-doc">
     <dependencies>
       <dep package="orc"/>
-      <dep package="libasound"/>
-      <dep package="libogg"/>
-      <dep package="libtheora"/>
-      <dep package="libvorbis"/>
-      <dep package="libxv"/>
       <dep package="gstreamer"/>
     </dependencies>
     <branch repo="gstreamer" module="gst-plugins-base" checkoutdir="gst-plugins-base"/>
@@ -39,9 +32,6 @@
 
   <autotools id="gst-plugins-good" autogenargs="--disable-gtk-doc">
     <dependencies>
-      <dep package="libjpeg"/>
-      <dep package="libsoup"/>
-      <dep package="libvpx"/>
       <dep package="gstreamer"/>
       <dep package="gst-plugins-base"/>
     </dependencies>
@@ -60,8 +50,6 @@
     <dependencies>
       <dep package="gstreamer"/>
       <dep package="gst-plugins-base"/>
-      <dep package="x264"/>
-      <dep package="lame"/>
     </dependencies>
     <branch repo="gstreamer" module="gst-plugins-ugly" checkoutdir="gst-plugins-ugly"/>
   </autotools>
