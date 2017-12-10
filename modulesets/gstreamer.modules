@@ -8,8 +8,8 @@
 
   <repository type="git" name="gstreamer"
       href="git://anongit.freedesktop.org/git/gstreamer/"/>
-  <repository type="git" name="slomo"
-      href="git://people.freedesktop.org/~slomo/"/>
+  <repository type="git" name="transcoder"
+      href="https://github.com/pudding8757/"/>
 
   <autotools id="orc" autogenargs="--disable-gtk-doc">
     <branch repo="gstreamer" module="orc" checkoutdir="orc"/>
@@ -74,6 +74,15 @@
     <branch repo="gstreamer" module="gst-devtools.git" checkoutdir="gst-devtools" subdir="validate"/>
   </autotools>
 
+  <autotools id="gst-transcoder"
+             autogen-template="./configure --prefix=%(prefix)s --libdir=%(libdir)s">
+    <dependencies>
+      <dep package="gstreamer"/>
+      <dep package="gst-plugins-base"/>
+    </dependencies>
+    <branch repo="transcoder" module="gst-transcoder.git" checkoutdir="gst-transcoder"/>
+  </autotools>
+
   <metamodule id="gst">
     <dependencies>
       <dep package="gstreamer"/>
@@ -83,6 +92,7 @@
       <dep package="gst-plugins-bad"/>
       <dep package="gst-plugins-ugly"/>
       <dep package="gst-devtools"/>
+      <dep package="gst-transcoder"/>
     </dependencies>
   </metamodule>
 
