@@ -36,7 +36,7 @@
     </systemdependencies>
   </systemmodule>
 
-  <autotools id="glib">
+  <autotools id="glib" autogenargs="CFLAGS=-O0">
     <dependencies>
       <dep package="zlib"/>
     </dependencies>
