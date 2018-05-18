@@ -43,6 +43,7 @@
       <dep package="gstreamer"/>
       <dep package="gst-plugins-base"/>
       <dep package="libnice"/>
+      <dep package="webrtc-audio-processing"/>
     </dependencies>
     <branch repo="gstreamer" module="gst-plugins-bad" checkoutdir="gst-plugins-bad"/>
   </autotools>

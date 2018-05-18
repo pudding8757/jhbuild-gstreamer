@@ -22,6 +22,8 @@
       href="https://github.com/yasm/yasm/archive/"/>
   <repository type="tarball" name="nice"
       href="http://nice.freedesktop.org/releases/"/>
+  <repository type="tarball" name="webrtcdsp"
+      href="http://freedesktop.org/software/pulseaudio/webrtc-audio-processing/"/>
 
   <autotools id="libnice"
              autogenargs="--with-gstreamer --without-gstreamer-0.10 --disable-gtk-doc">
@@ -33,6 +35,16 @@
             version="0.1.14"
             module="libnice-0.1.14.tar.gz"
             checkoutdir="libnice"/>
+  </autotools>
+
+  <autotools id="webrtc-audio-processing">
+    <dependencies>
+      <dep package="gnustl"/>
+    </dependencies>
+    <branch repo="webrtcdsp"
+            version="0.2"
+            module="webrtc-audio-processing-0.2.tar.xz"
+            checkoutdir="webrtc-audio-processing"/>
   </autotools>
 
   <autotools id="libogg">
