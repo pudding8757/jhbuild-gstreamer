@@ -38,7 +38,7 @@
     <branch repo="gstreamer" module="gst-plugins-good" checkoutdir="gst-plugins-good"/>
   </autotools>
 
-  <autotools id="gst-plugins-bad" autogenargs="--disable-gtk-doc --enable-introspection CFLAGS=-O0">
+  <autotools id="gst-plugins-bad" autogenargs="--disable-gtk-doc --enable-introspection CFLAGS=-O0 CPPFLAGS=-I/usr/local/cuda/targets/x86_64-linux/include LDFLAGS=-L/usr/lib/nvidia-396">
     <dependencies>
       <dep package="gstreamer"/>
       <dep package="gst-plugins-base"/>
@@ -60,6 +60,14 @@
       <dep package="gst-plugins-base"/>
     </dependencies>
     <branch repo="gstreamer" module="gst-libav" checkoutdir="gst-libav"/>
+  </autotools>
+
+  <autotools id="gst-rtsp-server" autogenargs="--disable-gtk-doc --enable-introspection CFLAGS=-O0">
+    <dependencies>
+      <dep package="gstreamer"/>
+      <dep package="gst-plugins-base"/>
+    </dependencies>
+    <branch repo="gstreamer" module="gst-rtsp-server" checkoutdir="gst-rtsp-server"/>
   </autotools>
 
   <autotools id="gst-devtools" autogenargs="--disable-gtk-doc --enable-introspection">
@@ -91,6 +99,7 @@
       <dep package="gst-plugins-good"/>
       <dep package="gst-plugins-bad"/>
       <dep package="gst-plugins-ugly"/>
+      <dep package="gst-rtsp-server"/>
       <dep package="gst-devtools"/>
       <dep package="gst-transcoder"/>
     </dependencies>
