@@ -42,6 +42,7 @@
     <dependencies>
       <dep package="gstreamer"/>
       <dep package="gst-plugins-base"/>
+      <dep package="libnice"/>
     </dependencies>
     <branch repo="gstreamer" module="gst-plugins-bad" checkoutdir="gst-plugins-bad"/>
   </autotools>

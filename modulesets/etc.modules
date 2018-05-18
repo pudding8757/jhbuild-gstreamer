@@ -20,6 +20,20 @@
       href="http://downloads.sourceforge.net/"/>
   <repository type="tarball" name="yasm"
       href="https://github.com/yasm/yasm/archive/"/>
+  <repository type="tarball" name="nice"
+      href="http://nice.freedesktop.org/releases/"/>
+
+  <autotools id="libnice"
+             autogenargs="--with-gstreamer --without-gstreamer-0.10 --disable-gtk-doc">
+    <dependencies>
+      <dep package="glib"/>
+      <dep package="gstreamer-1.0"/>
+    </dependencies>
+    <branch repo="nice"
+            version="0.1.14"
+            module="libnice-0.1.14.tar.gz"
+            checkoutdir="libnice"/>
+  </autotools>
 
   <autotools id="libogg">
     <branch repo="xiph"
