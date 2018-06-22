@@ -12,8 +12,8 @@
       href="http://www.sqlite.org/"/>
   <repository type="tarball" name="libsoup"
       href="https://github.com/GNOME/libsoup/archive/"/>
-  <repository type="tarball" name="chromium.googlesource.com"
-      href="https://chromium.googlesource.com/webm/libvpx/+archive/"/>
+  <repository type="git" name="libvpx"
+      href="https://github.com/webmproject/"/>
   <repository type="git" name="videolan"
       href="git://git.videolan.org/"/>
   <repository type="tarball" name="downloads.sourceforge.net"
@@ -119,13 +119,13 @@
   </autotools>
 
   <autotools id="libvpx"
-             autogen-template="./configure --prefix=%(prefix)s --enable-vp8 --enable-vp9 --enable-shared --disable-static">
+             autogen-template="./configure --prefix=%(prefix)s --enable-vp8 --enable-vp9 --enable-shared --disable-static --enable-pic --as=yasm --disable-unit-tests --size-limit=16384x16384 --enable-postproc --enable-multi-res-encoding --enable-temporal-denoising --enable-vp9-temporal-denoising --enable-vp9-postproc --enable-runtime-cpu-detect --enable-vp9-highbitdepth">
     <dependencies>
       <dep package="yasm"/>
     </dependencies>
-    <branch repo="chromium.googlesource.com"
-            module="0c0a05046db1c0b59a7fcc29785a190fdbbe39c2.tar.gz"
-            version="1.6.1"
+    <branch repo="libvpx"
+            module="libvpx.git"
+            tag="v1.6.0"
             checkoutdir="libvpx"/>
   </autotools>
 
