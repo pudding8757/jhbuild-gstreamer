@@ -7,7 +7,7 @@
   <include href="etc.modules"/>
 
   <repository type="git" name="gstreamer"
-      href="git://anongit.freedesktop.org/git/gstreamer/"/>
+      href="https://gitlab.freedesktop.org/gstreamer/"/>
   <repository type="git" name="transcoder"
       href="https://github.com/pudding8757/"/>
 
